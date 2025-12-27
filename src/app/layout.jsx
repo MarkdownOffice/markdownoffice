@@ -4,6 +4,7 @@ import { Banner, Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import MarkdownOfficeIcon from "./icon/MarkdownOfficeIcon";
+import { Twitter } from "../components/icons";
 
 export const metadata = {
   metadataBase: new URL("https://markdownoffice.com"),
@@ -31,15 +32,14 @@ export default async function RootLayout({ children }) {
   const navbar = (
     <Navbar
       logo={
-        <div className="flex gap-2 flex-col items-center sm:flex-row sm:items-center">
-          <span>
-          <MarkdownOfficeIcon style={{ width: 24, height: 24, marginRight: 8 }} />
-          </span>
-          <b>MarkdownOffice</b>{" "}
+        <div className="x:flex x:items-center x:gap-2">
+          <MarkdownOfficeIcon style={{ width: 24, height: 24 }} />
+          <b>MarkdownOffice</b>
         </div>
       }
-      // Next.js discord server
-      chatLink="https://discord.gg/hEM84NMkRv"
+      projectLink={"https://github.com/markdownoffice"}
+      chatLink="https://x.com/MarkdownOffice"
+      chatIcon={<Twitter />}
     />
   );
   const pageMap = await getPageMap();
@@ -63,11 +63,17 @@ export default async function RootLayout({ children }) {
       </Head>
       <body>
         <Layout
-          banner={<Banner storageKey="Nextra 2">Nextra 2 Alpha</Banner>}
+          banner={
+            <Banner storageKey="MarkdownOffice">
+              MarkdownOffice is coming soon
+            </Banner>
+          }
           navbar={navbar}
-          footer={<Footer>MIT {new Date().getFullYear()} © Nextra.</Footer>}
+          footer={
+            <Footer>MIT {new Date().getFullYear()} © MarkdownOffice.</Footer>
+          }
           editLink="Edit this page on GitHub"
-          docsRepositoryBase="https://github.com/shuding/nextra/blob/main/examples/docs"
+          docsRepositoryBase="https://github.com/markdownoffice/markdownoffice/blob/main/content"
           sidebar={{ defaultMenuCollapseLevel: 1 }}
           pageMap={pageMap}
         >
