@@ -8,7 +8,7 @@ export default function IndexPage() {
         fontWeight: 'bold'
       }}
     >
-      Index page
+      Coming soon!
     </h1>
   )
 }
