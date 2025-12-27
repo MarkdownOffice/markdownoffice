@@ -6,7 +6,7 @@ on:
 
 jobs:
   release:
-    if: github.repository == 'shuding/nextra'
+    if: github.repository == 'markdownoffice/markdownoffice'
 
     runs-on: ubuntu-latest
 
