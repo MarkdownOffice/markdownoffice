@@ -5,8 +5,9 @@
   "scripts": {
     "build": "next build --webpack",
     "dev": "next",
-    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
-    "start": "next start"
+    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind && node scripts/generate-sitemap.js",
+    "start": "next start",
+    "sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "next": "^16.0.7",
