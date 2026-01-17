@@ -10,7 +10,7 @@ export const metadata = {
   metadataBase: new URL("https://markdownoffice.com"),
   title: {
     template: "%s - MarkdownOffice",
-    default: "MarkdownOffice",
+    default: "MarkdownOffice - LLM-first, markdown-native office suite with Git-friendly and free Self-host",
   },
   description:
     "MarkdownOffice: LLM-first markdown native office collaboration, and version control with fully self-hosted, auditable, and open by design",
@@ -45,7 +45,7 @@ export default async function RootLayout({ children }) {
   const pageMap = await getPageMap();
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
-      <Head faviconGlyph="✦">
+      <Head>
         <link
           rel="icon"
           type="image/png"
@@ -54,6 +54,7 @@ export default async function RootLayout({ children }) {
         />
         <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <meta name="apple-mobile-web-app-title" content="MarkdownOffice" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
